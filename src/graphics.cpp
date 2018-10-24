@@ -7,7 +7,9 @@
 #include <pspkernel.h>
 #include <oslib/oslib.h>
 
-PSP_MODULE_INFO("Hello World", 0, 1, 0);
+//this should all be moved when we create the main file
+//its needed for PSPSDK to compile stuffs
+PSP_MODULE_INFO("NCESPSP", 0, 1, 0);
 PSP_MAIN_THREAD_ATTR(THREAD_ATTR_USER | THREAD_ATTR_VFPU);
 PSP_HEAP_SIZE_KB(12*1024);
 

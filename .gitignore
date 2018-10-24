@@ -1,6 +1,8 @@
 # Compiled Objects
 src/*.o 
 EBOOT.PBP
+
+#Other things that I honestly don't know what do..
 PARAM.SFO
-NCESPSP.elf
-NCESPSP.prx
+*.elf
+*.prx
