@@ -1,0 +1,4 @@
+# Compiled Objects
+src/*.o 
+EBOOT.PBP
+PARAM.SFO
