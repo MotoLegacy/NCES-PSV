@@ -2,3 +2,5 @@
 src/*.o 
 EBOOT.PBP
 PARAM.SFO
+NCESPSP.elf
+NCESPSP.prx
