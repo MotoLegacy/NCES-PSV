@@ -1,6 +1,6 @@
 # Compiled Objects
 src/*.o 
-EBOOT.PBP
+psp/build/*
 
 #Other things that I honestly don't know what do..
 PARAM.SFO
@@ -12,4 +12,4 @@ vita/build/*.cmake
 vita/build/*.velf
 vita/build/*.self
 vita/build/*.vpk
-vita/build/CMakeFiles/
+vita/build/CMakeFiles/*

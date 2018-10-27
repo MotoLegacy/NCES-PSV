@@ -1,9 +1,12 @@
 #include "graphics.h"
+#include "inputHelper.h"
+
 #ifdef PSP
     PSP_MODULE_INFO("NCESPSP", 0, 1, 0);
     PSP_MAIN_THREAD_ATTR(THREAD_ATTR_USER | THREAD_ATTR_VFPU);
     PSP_HEAP_SIZE_KB(12*1024);
 #endif
+
 int main() 
 {   
     init();
@@ -23,6 +26,12 @@ int main()
             endDrawing();
         }
         skip = syncFrame();
+
+        #ifdef PSP
+        oslReadKeys();
+        if (getButton(FACE_CROSS))
+            oslQuit();
+        #endif
     }
     
     return 0;
