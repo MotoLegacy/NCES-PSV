@@ -4,10 +4,12 @@ EBOOT.PBP
 
 #Other things that I honestly don't know what do..
 PARAM.SFO
-*.elf
-*.prx
-*.txt
-*.cmake
-*.velf
-*.self
-*.vpk
+vita/build/*pk_param.sfo
+vita/build/*.elf
+vita/build/*.prx
+vita/build/*.txt
+vita/build/*.cmake
+vita/build/*.velf
+vita/build/*.self
+vita/build/*.vpk
+vita/build/CMakeFiles/
