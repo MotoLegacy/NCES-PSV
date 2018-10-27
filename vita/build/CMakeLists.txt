@@ -19,7 +19,7 @@ IF(DEFINE_DEBUG)
 ENDIF(DEFINE_DEBUG)
 
 
-set(SHORT_NAME RPPHS)
+set(SHORT_NAME NCESPSV)
 project(${SHORT_NAME})
 include("${VITASDK}/share/vita.cmake" REQUIRED)
 
