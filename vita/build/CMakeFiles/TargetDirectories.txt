@@ -1,0 +1,5 @@
+/home/rob/NCES-PSV/vita/build/CMakeFiles/edit_cache.dir
+/home/rob/NCES-PSV/vita/build/CMakeFiles/RPPHS.self.dir
+/home/rob/NCES-PSV/vita/build/CMakeFiles/RPPHS.elf.dir
+/home/rob/NCES-PSV/vita/build/CMakeFiles/RPPHS.vpk.dir
+/home/rob/NCES-PSV/vita/build/CMakeFiles/rebuild_cache.dir
