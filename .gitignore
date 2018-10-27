@@ -6,3 +6,8 @@ EBOOT.PBP
 PARAM.SFO
 *.elf
 *.prx
+*.txt
+*.cmake
+*.velf
+*.self
+*.vpk
