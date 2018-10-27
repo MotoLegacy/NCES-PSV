@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rob/NCES-PSV/src/graphics.cpp
+graphics.h
+/home/rob/NCES-PSV/src/graphics.h
+
+/home/rob/NCES-PSV/src/graphics.h
+pspkernel.h
+-
+oslib/oslib.h
+-
+vita2d.h
+-
+string
+-
+
+/home/rob/NCES-PSV/src/main.cpp
+graphics.h
+/home/rob/NCES-PSV/src/graphics.h
+
