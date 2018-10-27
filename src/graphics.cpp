@@ -1,35 +1,22 @@
 /* 
     Graphics.cpp - handles image defining and drawing
 */
+#include "graphics.h"
+//-------------------PSP SECTION--------------------//
+#ifdef PSP 
 
-#ifdef PSP //if the target platform is PSP
-
-#include <pspkernel.h>
-#include <oslib/oslib.h>
-
-//this should all be moved when we create the main file
-//its needed for PSPSDK to compile stuffs
-PSP_MODULE_INFO("NCESPSP", 0, 1, 0);
-PSP_MAIN_THREAD_ATTR(THREAD_ATTR_USER | THREAD_ATTR_VFPU);
-PSP_HEAP_SIZE_KB(12*1024);
-
-#else //we're not PSP according to the compiler, so we're the Vita
-
-#include <vita2d.h>
-#include <string>
-
-#endif
-
-//defining images
-#ifdef PSP
-OSL_IMAGE *defineImage(char *filename) {
+    OSL_IMAGE *defineImage(char *filename) {
     OSL_IMAGE *temp;
-    temp = oslLoadImageFilePNG(filename, 0, 0);
+    temp = oslLoadImageFilePNG(filename, OSL_IN_RAM | OSL_SWIZZLED, OSL_PF_8888);
 
     return temp;
 }
 
-#else
+void drawImage(OSL_IMAGE *img, int x, int y, int scalex, int scaley) {
+    oslDrawImageXY(img, x, y);
+}
+//-----------------VITA SECTION---------------------//
+#else 
 
 vita2d_texture *defineImage(const char *filename) {
     std::string a = "app0:/";
@@ -41,24 +28,14 @@ vita2d_texture *defineImage(const char *filename) {
 
     return temp;
 }
-#endif
-
-//actually drawing images
-#ifdef PSP
-
-void drawImage(OSL_IMAGE *img, int x, int y, int scalex, int scaley) {
-    oslDrawImageXY(img, x, y);
-}
-
-#else
 
 void drawImage(const vita2d_texture *texture, float x, float y, float scalex, float scaley) {
     vita2d_draw_texture_scale(texture, x, y, scalex, scaley);
 }
 
 #endif
-
-void initGfx() {
+//------------------GENERAL SECTION----------------//
+void init() {
     #ifdef PSP
 
     oslInit(0);
@@ -73,6 +50,39 @@ void initGfx() {
     #endif
 }
 
-int main() {
+void startDrawing(){
+    #ifdef PSP 
+
+    oslStartDrawing();
+
+    #else
+    
+    vita2d_start_drawing();
+	vita2d_clear_screen();
+
+    #endif
+}
+
+void endDrawing(){
+    #ifdef PSP
+    
+    oslEndDrawing();
+
+    #else 
+
+    vita2d_end_drawing();
+	vita2d_swap_buffers();
+
+    #endif
+}
+
+int syncFrame(){
+    #ifdef PSP
+
+    oslEndFrame();
+    return oslSyncFrame();
+
+    #else 
     return 0;
+    #endif
 }
