@@ -111,43 +111,43 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named RPPHS.self
+# Target rules for targets named NCESPSV.elf
 
 # Build rule for target.
-RPPHS.self: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 RPPHS.self
-.PHONY : RPPHS.self
+NCESPSV.elf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NCESPSV.elf
+.PHONY : NCESPSV.elf
 
 # fast build rule for target.
-RPPHS.self/fast:
-	$(MAKE) -f CMakeFiles/RPPHS.self.dir/build.make CMakeFiles/RPPHS.self.dir/build
-.PHONY : RPPHS.self/fast
+NCESPSV.elf/fast:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/build
+.PHONY : NCESPSV.elf/fast
 
 #=============================================================================
-# Target rules for targets named RPPHS.elf
+# Target rules for targets named NCESPSV.vpk
 
 # Build rule for target.
-RPPHS.elf: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 RPPHS.elf
-.PHONY : RPPHS.elf
+NCESPSV.vpk: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NCESPSV.vpk
+.PHONY : NCESPSV.vpk
 
 # fast build rule for target.
-RPPHS.elf/fast:
-	$(MAKE) -f CMakeFiles/RPPHS.elf.dir/build.make CMakeFiles/RPPHS.elf.dir/build
-.PHONY : RPPHS.elf/fast
+NCESPSV.vpk/fast:
+	$(MAKE) -f CMakeFiles/NCESPSV.vpk.dir/build.make CMakeFiles/NCESPSV.vpk.dir/build
+.PHONY : NCESPSV.vpk/fast
 
 #=============================================================================
-# Target rules for targets named RPPHS.vpk
+# Target rules for targets named NCESPSV.self
 
 # Build rule for target.
-RPPHS.vpk: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 RPPHS.vpk
-.PHONY : RPPHS.vpk
+NCESPSV.self: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NCESPSV.self
+.PHONY : NCESPSV.self
 
 # fast build rule for target.
-RPPHS.vpk/fast:
-	$(MAKE) -f CMakeFiles/RPPHS.vpk.dir/build.make CMakeFiles/RPPHS.vpk.dir/build
-.PHONY : RPPHS.vpk/fast
+NCESPSV.self/fast:
+	$(MAKE) -f CMakeFiles/NCESPSV.self.dir/build.make CMakeFiles/NCESPSV.self.dir/build
+.PHONY : NCESPSV.self/fast
 
 home/rob/NCES-PSV/src/graphics.obj: home/rob/NCES-PSV/src/graphics.cpp.obj
 
@@ -155,7 +155,7 @@ home/rob/NCES-PSV/src/graphics.obj: home/rob/NCES-PSV/src/graphics.cpp.obj
 
 # target to build an object file
 home/rob/NCES-PSV/src/graphics.cpp.obj:
-	$(MAKE) -f CMakeFiles/RPPHS.elf.dir/build.make CMakeFiles/RPPHS.elf.dir/home/rob/NCES-PSV/src/graphics.cpp.obj
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/home/rob/NCES-PSV/src/graphics.cpp.obj
 .PHONY : home/rob/NCES-PSV/src/graphics.cpp.obj
 
 home/rob/NCES-PSV/src/graphics.i: home/rob/NCES-PSV/src/graphics.cpp.i
@@ -164,7 +164,7 @@ home/rob/NCES-PSV/src/graphics.i: home/rob/NCES-PSV/src/graphics.cpp.i
 
 # target to preprocess a source file
 home/rob/NCES-PSV/src/graphics.cpp.i:
-	$(MAKE) -f CMakeFiles/RPPHS.elf.dir/build.make CMakeFiles/RPPHS.elf.dir/home/rob/NCES-PSV/src/graphics.cpp.i
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/home/rob/NCES-PSV/src/graphics.cpp.i
 .PHONY : home/rob/NCES-PSV/src/graphics.cpp.i
 
 home/rob/NCES-PSV/src/graphics.s: home/rob/NCES-PSV/src/graphics.cpp.s
@@ -173,8 +173,35 @@ home/rob/NCES-PSV/src/graphics.s: home/rob/NCES-PSV/src/graphics.cpp.s
 
 # target to generate assembly for a file
 home/rob/NCES-PSV/src/graphics.cpp.s:
-	$(MAKE) -f CMakeFiles/RPPHS.elf.dir/build.make CMakeFiles/RPPHS.elf.dir/home/rob/NCES-PSV/src/graphics.cpp.s
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/home/rob/NCES-PSV/src/graphics.cpp.s
 .PHONY : home/rob/NCES-PSV/src/graphics.cpp.s
+
+home/rob/NCES-PSV/src/inputHelper.obj: home/rob/NCES-PSV/src/inputHelper.cpp.obj
+
+.PHONY : home/rob/NCES-PSV/src/inputHelper.obj
+
+# target to build an object file
+home/rob/NCES-PSV/src/inputHelper.cpp.obj:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/home/rob/NCES-PSV/src/inputHelper.cpp.obj
+.PHONY : home/rob/NCES-PSV/src/inputHelper.cpp.obj
+
+home/rob/NCES-PSV/src/inputHelper.i: home/rob/NCES-PSV/src/inputHelper.cpp.i
+
+.PHONY : home/rob/NCES-PSV/src/inputHelper.i
+
+# target to preprocess a source file
+home/rob/NCES-PSV/src/inputHelper.cpp.i:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/home/rob/NCES-PSV/src/inputHelper.cpp.i
+.PHONY : home/rob/NCES-PSV/src/inputHelper.cpp.i
+
+home/rob/NCES-PSV/src/inputHelper.s: home/rob/NCES-PSV/src/inputHelper.cpp.s
+
+.PHONY : home/rob/NCES-PSV/src/inputHelper.s
+
+# target to generate assembly for a file
+home/rob/NCES-PSV/src/inputHelper.cpp.s:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/home/rob/NCES-PSV/src/inputHelper.cpp.s
+.PHONY : home/rob/NCES-PSV/src/inputHelper.cpp.s
 
 home/rob/NCES-PSV/src/main.obj: home/rob/NCES-PSV/src/main.cpp.obj
 
@@ -182,7 +209,7 @@ home/rob/NCES-PSV/src/main.obj: home/rob/NCES-PSV/src/main.cpp.obj
 
 # target to build an object file
 home/rob/NCES-PSV/src/main.cpp.obj:
-	$(MAKE) -f CMakeFiles/RPPHS.elf.dir/build.make CMakeFiles/RPPHS.elf.dir/home/rob/NCES-PSV/src/main.cpp.obj
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/home/rob/NCES-PSV/src/main.cpp.obj
 .PHONY : home/rob/NCES-PSV/src/main.cpp.obj
 
 home/rob/NCES-PSV/src/main.i: home/rob/NCES-PSV/src/main.cpp.i
@@ -191,7 +218,7 @@ home/rob/NCES-PSV/src/main.i: home/rob/NCES-PSV/src/main.cpp.i
 
 # target to preprocess a source file
 home/rob/NCES-PSV/src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/RPPHS.elf.dir/build.make CMakeFiles/RPPHS.elf.dir/home/rob/NCES-PSV/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/home/rob/NCES-PSV/src/main.cpp.i
 .PHONY : home/rob/NCES-PSV/src/main.cpp.i
 
 home/rob/NCES-PSV/src/main.s: home/rob/NCES-PSV/src/main.cpp.s
@@ -200,7 +227,7 @@ home/rob/NCES-PSV/src/main.s: home/rob/NCES-PSV/src/main.cpp.s
 
 # target to generate assembly for a file
 home/rob/NCES-PSV/src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/RPPHS.elf.dir/build.make CMakeFiles/RPPHS.elf.dir/home/rob/NCES-PSV/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/home/rob/NCES-PSV/src/main.cpp.s
 .PHONY : home/rob/NCES-PSV/src/main.cpp.s
 
 # Help Target
@@ -210,13 +237,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... RPPHS.self"
-	@echo "... RPPHS.elf"
-	@echo "... RPPHS.vpk"
+	@echo "... NCESPSV.elf"
+	@echo "... NCESPSV.vpk"
+	@echo "... NCESPSV.self"
 	@echo "... rebuild_cache"
 	@echo "... home/rob/NCES-PSV/src/graphics.obj"
 	@echo "... home/rob/NCES-PSV/src/graphics.i"
 	@echo "... home/rob/NCES-PSV/src/graphics.s"
+	@echo "... home/rob/NCES-PSV/src/inputHelper.obj"
+	@echo "... home/rob/NCES-PSV/src/inputHelper.i"
+	@echo "... home/rob/NCES-PSV/src/inputHelper.s"
 	@echo "... home/rob/NCES-PSV/src/main.obj"
 	@echo "... home/rob/NCES-PSV/src/main.i"
 	@echo "... home/rob/NCES-PSV/src/main.s"
