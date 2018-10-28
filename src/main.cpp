@@ -24,6 +24,10 @@ int main()
         if(!skip){
             startDrawing();
             drawImage(testImg, 0, 0, 1, 1);
+            #ifdef PSP
+            oslDrawStringf(0, 0, "Joystick x %i", getJoyStickX());
+            oslDrawStringf(0, 30, "Joystick y %i", getJoyStickY());
+            #endif
             endDrawing();
         }
         skip = syncFrame();
