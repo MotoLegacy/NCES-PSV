@@ -38,6 +38,7 @@ include_directories(
 add_executable(${SHORT_NAME}.elf
 ../../src/main.cpp
 ../../src/graphics.cpp
+../../src/inputHelper.cpp
 )
 
 target_link_libraries(${SHORT_NAME}.elf

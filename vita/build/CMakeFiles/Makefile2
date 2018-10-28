@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/rob/NCES-PSV/vita/build
 CMakeFiles/NCESPSV.elf.dir/all:
 	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/depend
 	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rob/NCES-PSV/vita/build/CMakeFiles --progress-num=1,2,3 "Built target NCESPSV.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rob/NCES-PSV/vita/build/CMakeFiles --progress-num=1,2,3,4 "Built target NCESPSV.elf"
 .PHONY : CMakeFiles/NCESPSV.elf.dir/all
 
 # Include target in all.
@@ -76,7 +76,7 @@ all: CMakeFiles/NCESPSV.elf.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NCESPSV.elf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rob/NCES-PSV/vita/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rob/NCES-PSV/vita/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/NCESPSV.elf.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rob/NCES-PSV/vita/build/CMakeFiles 0
 .PHONY : CMakeFiles/NCESPSV.elf.dir/rule
@@ -103,7 +103,7 @@ clean: CMakeFiles/NCESPSV.elf.dir/clean
 CMakeFiles/NCESPSV.vpk.dir/all: CMakeFiles/NCESPSV.self.dir/all
 	$(MAKE) -f CMakeFiles/NCESPSV.vpk.dir/build.make CMakeFiles/NCESPSV.vpk.dir/depend
 	$(MAKE) -f CMakeFiles/NCESPSV.vpk.dir/build.make CMakeFiles/NCESPSV.vpk.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rob/NCES-PSV/vita/build/CMakeFiles --progress-num=6,7 "Built target NCESPSV.vpk"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rob/NCES-PSV/vita/build/CMakeFiles --progress-num=7,8 "Built target NCESPSV.vpk"
 .PHONY : CMakeFiles/NCESPSV.vpk.dir/all
 
 # Include target in all.
@@ -113,7 +113,7 @@ all: CMakeFiles/NCESPSV.vpk.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NCESPSV.vpk.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rob/NCES-PSV/vita/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rob/NCES-PSV/vita/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/NCESPSV.vpk.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rob/NCES-PSV/vita/build/CMakeFiles 0
 .PHONY : CMakeFiles/NCESPSV.vpk.dir/rule
@@ -140,7 +140,7 @@ clean: CMakeFiles/NCESPSV.vpk.dir/clean
 CMakeFiles/NCESPSV.self.dir/all: CMakeFiles/NCESPSV.elf.dir/all
 	$(MAKE) -f CMakeFiles/NCESPSV.self.dir/build.make CMakeFiles/NCESPSV.self.dir/depend
 	$(MAKE) -f CMakeFiles/NCESPSV.self.dir/build.make CMakeFiles/NCESPSV.self.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rob/NCES-PSV/vita/build/CMakeFiles --progress-num=4,5 "Built target NCESPSV.self"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rob/NCES-PSV/vita/build/CMakeFiles --progress-num=5,6 "Built target NCESPSV.self"
 .PHONY : CMakeFiles/NCESPSV.self.dir/all
 
 # Include target in all.
@@ -150,7 +150,7 @@ all: CMakeFiles/NCESPSV.self.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NCESPSV.self.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rob/NCES-PSV/vita/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rob/NCES-PSV/vita/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/NCESPSV.self.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rob/NCES-PSV/vita/build/CMakeFiles 0
 .PHONY : CMakeFiles/NCESPSV.self.dir/rule

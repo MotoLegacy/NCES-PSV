@@ -176,6 +176,33 @@ home/rob/NCES-PSV/src/graphics.cpp.s:
 	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/home/rob/NCES-PSV/src/graphics.cpp.s
 .PHONY : home/rob/NCES-PSV/src/graphics.cpp.s
 
+home/rob/NCES-PSV/src/inputHelper.obj: home/rob/NCES-PSV/src/inputHelper.cpp.obj
+
+.PHONY : home/rob/NCES-PSV/src/inputHelper.obj
+
+# target to build an object file
+home/rob/NCES-PSV/src/inputHelper.cpp.obj:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/home/rob/NCES-PSV/src/inputHelper.cpp.obj
+.PHONY : home/rob/NCES-PSV/src/inputHelper.cpp.obj
+
+home/rob/NCES-PSV/src/inputHelper.i: home/rob/NCES-PSV/src/inputHelper.cpp.i
+
+.PHONY : home/rob/NCES-PSV/src/inputHelper.i
+
+# target to preprocess a source file
+home/rob/NCES-PSV/src/inputHelper.cpp.i:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/home/rob/NCES-PSV/src/inputHelper.cpp.i
+.PHONY : home/rob/NCES-PSV/src/inputHelper.cpp.i
+
+home/rob/NCES-PSV/src/inputHelper.s: home/rob/NCES-PSV/src/inputHelper.cpp.s
+
+.PHONY : home/rob/NCES-PSV/src/inputHelper.s
+
+# target to generate assembly for a file
+home/rob/NCES-PSV/src/inputHelper.cpp.s:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/home/rob/NCES-PSV/src/inputHelper.cpp.s
+.PHONY : home/rob/NCES-PSV/src/inputHelper.cpp.s
+
 home/rob/NCES-PSV/src/main.obj: home/rob/NCES-PSV/src/main.cpp.obj
 
 .PHONY : home/rob/NCES-PSV/src/main.obj
@@ -217,6 +244,9 @@ help:
 	@echo "... home/rob/NCES-PSV/src/graphics.obj"
 	@echo "... home/rob/NCES-PSV/src/graphics.i"
 	@echo "... home/rob/NCES-PSV/src/graphics.s"
+	@echo "... home/rob/NCES-PSV/src/inputHelper.obj"
+	@echo "... home/rob/NCES-PSV/src/inputHelper.i"
+	@echo "... home/rob/NCES-PSV/src/inputHelper.s"
 	@echo "... home/rob/NCES-PSV/src/main.obj"
 	@echo "... home/rob/NCES-PSV/src/main.i"
 	@echo "... home/rob/NCES-PSV/src/main.s"

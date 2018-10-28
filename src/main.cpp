@@ -11,6 +11,7 @@ int main()
 {   
     init();
     int skip = 0;
+    bool quit = false;
     #ifdef PSP
     OSL_IMAGE *testImg = NULL;
     #else 
@@ -19,7 +20,7 @@ int main()
 
     testImg = defineImage("gfx/test.png");
 
-    while(true){
+    while(!quit){
         if(!skip){
             startDrawing();
             drawImage(testImg, 0, 0, 1, 1);
@@ -27,12 +28,18 @@ int main()
         }
         skip = syncFrame();
 
-        #ifdef PSP
-        oslReadKeys();
         if (getButton(FACE_CROSS))
-            oslQuit();
-        #endif
+            quit = true;
     }
-    
+
+    #ifdef PSP
+    oslDeleteImage(testImg);
+    oslEndGfx();
+    oslQuit();
+    #else
+    vita2d_fini();
+	vita2d_free_texture(testImg);
+    sceKernelExitProcess(0);
+    #endif    
     return 0;
 }
