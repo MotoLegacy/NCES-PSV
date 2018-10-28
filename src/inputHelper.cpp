@@ -73,3 +73,33 @@ bool getButton(int button) {
     return false;
 }
 
+int getJoyStickX() {
+    #ifdef PSP
+    oslReadKeys();
+    return osl_keys->analogX;
+
+    #else 
+    SceCtrlData pad;
+    memset(&pad, 0, sizeof(pad));
+    sceCtrlSetSamplingMode(SCE_CTRL_MODE_ANALOG);
+    sceCtrlPeekBufferPositive(0, &pad, 1);
+    return pad.lx - 255;
+
+    #endif
+}
+
+int getJoyStickY() {
+    #ifdef PSP
+    oslReadKeys();
+    return osl_keys->analogY;
+
+    #else 
+    SceCtrlData pad;
+    memset(&pad, 0, sizeof(pad));
+    sceCtrlSetSamplingMode(SCE_CTRL_MODE_ANALOG);
+    sceCtrlPeekBufferPositive(0, &pad, 1);
+    return pad.ly - 255;
+
+    #endif
+}
+

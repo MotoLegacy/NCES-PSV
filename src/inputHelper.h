@@ -34,5 +34,6 @@
 #define DPAD_RIGHT      8
 
 bool getButton(int button);
-
+int getJoyStickX();
+int getJoyStickY();
 #endif
