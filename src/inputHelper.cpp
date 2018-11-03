@@ -28,19 +28,19 @@ bool getButton(int button) {
                 return true;
             break;
         case DPAD_UP:
-            if (osl_keys->pressed.up)
+            if (osl_keys->held.up)
                 return true;
             break;
         case DPAD_DOWN:
-            if (osl_keys->pressed.down)
+            if (osl_keys->held.down)
                 return true;
             break;
         case DPAD_LEFT:
-            if (osl_keys->pressed.left)
+            if (osl_keys->held.left)
                 return true;
             break;
         case DPAD_RIGHT:
-            if (osl_keys->pressed.right)
+            if (osl_keys->held.right)
                 return true;
             break;
         default: return false;

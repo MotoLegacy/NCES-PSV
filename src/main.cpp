@@ -41,6 +41,14 @@ int main()
 
         if (getButton(FACE_CROSS))
             quit = true;
+        if (getButton(DPAD_LEFT))
+            nic.moveX(-5);
+        if (getButton(DPAD_RIGHT))
+            nic.moveX(5);
+        if (getButton(DPAD_DOWN))
+            nic.moveY(5);
+        if(getButton(DPAD_UP))
+            nic.moveY(-5);
     }
 
     #ifdef PSP
