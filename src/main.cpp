@@ -14,8 +14,12 @@ int main()
     bool quit = false;
     #ifdef PSP
     OSL_IMAGE *testImg = NULL;
+    int screen_width = 480;
+    int screen_height = 272;
     #else 
     vita2d_texture *testImg = NULL;
+    int screen_width = 960;
+    int screen_height = 544;
     #endif
 
     testImg = defineImage("gfx/test.png");
@@ -23,7 +27,7 @@ int main()
     while(!quit){
         if(!skip){
             startDrawing();
-            drawImage(testImg, 0, 0, 1, 1);
+            drawRect(0, 0, screen_width, screen_height, 255, 255, 255);
             #ifdef PSP
             oslDrawStringf(0, 0, "Joystick x %i", getJoyStickX());
             oslDrawStringf(0, 30, "Joystick y %i", getJoyStickY());
