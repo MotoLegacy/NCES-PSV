@@ -1,5 +1,6 @@
 #include "graphics.h"
 #include "inputHelper.h"
+#include "nicCage.h"
 
 #ifdef PSP
     PSP_MODULE_INFO("NCESPSP", 0, 1, 0);
