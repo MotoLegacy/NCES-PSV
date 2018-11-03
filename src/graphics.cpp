@@ -86,3 +86,11 @@ int syncFrame(){
     return 0;
     #endif
 }
+
+void drawRect(int x, int y, int w, int h, int r, int g, int b){
+    #ifdef PSP 
+    oslDrawFillRect(x, y, x + w, y + h, RGBA(r, g, b, 255));
+    #else
+    vita2d_draw_rectangle(x, y, w, h, RGBA8(r, g, b, 255));
+    #endif
+}

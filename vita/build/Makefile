@@ -149,6 +149,33 @@ NCESPSV.self/fast:
 	$(MAKE) -f CMakeFiles/NCESPSV.self.dir/build.make CMakeFiles/NCESPSV.self.dir/build
 .PHONY : NCESPSV.self/fast
 
+home/rob/NCES-PSV/src/collisionHelper.obj: home/rob/NCES-PSV/src/collisionHelper.cpp.obj
+
+.PHONY : home/rob/NCES-PSV/src/collisionHelper.obj
+
+# target to build an object file
+home/rob/NCES-PSV/src/collisionHelper.cpp.obj:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/home/rob/NCES-PSV/src/collisionHelper.cpp.obj
+.PHONY : home/rob/NCES-PSV/src/collisionHelper.cpp.obj
+
+home/rob/NCES-PSV/src/collisionHelper.i: home/rob/NCES-PSV/src/collisionHelper.cpp.i
+
+.PHONY : home/rob/NCES-PSV/src/collisionHelper.i
+
+# target to preprocess a source file
+home/rob/NCES-PSV/src/collisionHelper.cpp.i:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/home/rob/NCES-PSV/src/collisionHelper.cpp.i
+.PHONY : home/rob/NCES-PSV/src/collisionHelper.cpp.i
+
+home/rob/NCES-PSV/src/collisionHelper.s: home/rob/NCES-PSV/src/collisionHelper.cpp.s
+
+.PHONY : home/rob/NCES-PSV/src/collisionHelper.s
+
+# target to generate assembly for a file
+home/rob/NCES-PSV/src/collisionHelper.cpp.s:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/home/rob/NCES-PSV/src/collisionHelper.cpp.s
+.PHONY : home/rob/NCES-PSV/src/collisionHelper.cpp.s
+
 home/rob/NCES-PSV/src/graphics.obj: home/rob/NCES-PSV/src/graphics.cpp.obj
 
 .PHONY : home/rob/NCES-PSV/src/graphics.obj
@@ -230,6 +257,33 @@ home/rob/NCES-PSV/src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/home/rob/NCES-PSV/src/main.cpp.s
 .PHONY : home/rob/NCES-PSV/src/main.cpp.s
 
+home/rob/NCES-PSV/src/nicCage.obj: home/rob/NCES-PSV/src/nicCage.cpp.obj
+
+.PHONY : home/rob/NCES-PSV/src/nicCage.obj
+
+# target to build an object file
+home/rob/NCES-PSV/src/nicCage.cpp.obj:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/home/rob/NCES-PSV/src/nicCage.cpp.obj
+.PHONY : home/rob/NCES-PSV/src/nicCage.cpp.obj
+
+home/rob/NCES-PSV/src/nicCage.i: home/rob/NCES-PSV/src/nicCage.cpp.i
+
+.PHONY : home/rob/NCES-PSV/src/nicCage.i
+
+# target to preprocess a source file
+home/rob/NCES-PSV/src/nicCage.cpp.i:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/home/rob/NCES-PSV/src/nicCage.cpp.i
+.PHONY : home/rob/NCES-PSV/src/nicCage.cpp.i
+
+home/rob/NCES-PSV/src/nicCage.s: home/rob/NCES-PSV/src/nicCage.cpp.s
+
+.PHONY : home/rob/NCES-PSV/src/nicCage.s
+
+# target to generate assembly for a file
+home/rob/NCES-PSV/src/nicCage.cpp.s:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/home/rob/NCES-PSV/src/nicCage.cpp.s
+.PHONY : home/rob/NCES-PSV/src/nicCage.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -241,6 +295,9 @@ help:
 	@echo "... NCESPSV.vpk"
 	@echo "... NCESPSV.self"
 	@echo "... rebuild_cache"
+	@echo "... home/rob/NCES-PSV/src/collisionHelper.obj"
+	@echo "... home/rob/NCES-PSV/src/collisionHelper.i"
+	@echo "... home/rob/NCES-PSV/src/collisionHelper.s"
 	@echo "... home/rob/NCES-PSV/src/graphics.obj"
 	@echo "... home/rob/NCES-PSV/src/graphics.i"
 	@echo "... home/rob/NCES-PSV/src/graphics.s"
@@ -250,6 +307,9 @@ help:
 	@echo "... home/rob/NCES-PSV/src/main.obj"
 	@echo "... home/rob/NCES-PSV/src/main.i"
 	@echo "... home/rob/NCES-PSV/src/main.s"
+	@echo "... home/rob/NCES-PSV/src/nicCage.obj"
+	@echo "... home/rob/NCES-PSV/src/nicCage.i"
+	@echo "... home/rob/NCES-PSV/src/nicCage.s"
 .PHONY : help
 
 

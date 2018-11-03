@@ -25,5 +25,6 @@ void init();
 void startDrawing();
 void endDrawing();
 int syncFrame();
+void drawRect(int x, int y, int w, int h, int r, int g, int b);
 
 #endif

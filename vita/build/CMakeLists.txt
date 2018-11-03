@@ -39,6 +39,8 @@ add_executable(${SHORT_NAME}.elf
 ../../src/main.cpp
 ../../src/graphics.cpp
 ../../src/inputHelper.cpp
+../../src/collisionHelper.cpp
+../../src/nicCage.cpp
 )
 
 target_link_libraries(${SHORT_NAME}.elf
