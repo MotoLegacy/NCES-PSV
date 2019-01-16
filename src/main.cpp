@@ -43,8 +43,9 @@ int main()
                 drawImage(nicCageFace, nic.getRect().x, nic.getRect().y, 1, 1);
 
             #ifdef PSP
-            oslDrawStringf(0, 0, "Joystick x %i", getJoyStickX());
-            oslDrawStringf(0, 30, "Joystick y %i", getJoyStickY());
+            oslDrawString(0, 240, "DEBUG");
+            oslDrawStringf(0, 250, "Joystick x %i", getJoyStickX());
+            oslDrawStringf(0, 260, "Joystick y %i", getJoyStickY());
             #endif
             endDrawing();
         }
