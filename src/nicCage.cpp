@@ -1,10 +1,18 @@
 #include "nicCage.h"
 
 NicCage::NicCage() {
+    int nicX = 100;
+    int nicY = 124;
+
+    #ifdef PSP
+    nicX *= 0.5;
+    nicY *= 0.5;
+    #endif
+
     nicRect.x = 0;
     nicRect.y = 0;
-    nicRect.h = 20;
-    nicRect.w = 20;
+    nicRect.h = nicY;
+    nicRect.w = nicX;
 }
 
 void NicCage::moveX(int vel){

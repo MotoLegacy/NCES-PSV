@@ -1,6 +1,7 @@
 #include "graphics.h"
 #include "inputHelper.h"
 #include "nicCage.h"
+#include "chicken.h"
 
 #ifdef PSP
     PSP_MODULE_INFO("NCESPSP", 0, 1, 0);
@@ -15,6 +16,7 @@ int main()
     bool quit = false;
     bool translucent = false;
     NicCage nic;
+    Chicken chic;
 
     int screen_width = 960;
     int screen_height = 544;
@@ -22,15 +24,20 @@ int main()
     #ifdef PSP
     OSL_IMAGE *nicCageFace = NULL;
     OSL_IMAGE *nicCageFaceTranslucent = NULL;
+    OSL_IMAGE *chicken = NULL;
     screen_width *= 0.5;
     screen_height *= 0.5;
     #else
     vita2d_texture *nicCageFace = NULL;
     vita2d_texture *nicCageFaceTranslucent = NULL;
+    vita2d_texture *chicken = NULL;
     #endif
 
     nicCageFace = defineImage("gfx/NicCageFace.png");
     nicCageFaceTranslucent = defineImage("gfx/NicCageFaceTranslucent.png");
+    chicken = defineImage("gfx/chicken.png");
+
+    chic.spawnChicken();
 
     while(!quit){
         if(!skip){
@@ -41,6 +48,8 @@ int main()
                 drawImage(nicCageFaceTranslucent, nic.getRect().x, nic.getRect().y, 1, 1);
             else
                 drawImage(nicCageFace, nic.getRect().x, nic.getRect().y, 1, 1);
+
+            drawImage(chicken, chic.getRect().x, chic.getRect().y, 1, 1);
 
             #ifdef PSP
             oslDrawString(0, 240, "DEBUG");
@@ -72,12 +81,10 @@ int main()
     freeImage(nicCageFace);
 
     #ifdef PSP
-    //oslDeleteImage(nicCageFace);
     oslEndGfx();
     oslQuit();
     #else
     vita2d_fini();
-	//vita2d_free_texture(nicCageFace);
     sceKernelExitProcess(0);
     #endif  
 

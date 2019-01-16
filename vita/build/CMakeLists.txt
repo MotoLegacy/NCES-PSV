@@ -41,6 +41,7 @@ add_executable(${SHORT_NAME}.elf
 ../../src/inputHelper.cpp
 ../../src/collisionHelper.cpp
 ../../src/nicCage.cpp
+../../src/chicken.cpp
 )
 
 target_link_libraries(${SHORT_NAME}.elf
