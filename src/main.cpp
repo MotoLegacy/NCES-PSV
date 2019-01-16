@@ -22,12 +22,19 @@ int main()
     int screen_width = 960;
     int screen_height = 544;
 
+    int celeryEaten = 0;
+
+    int hitDifX = 30;
+    int hitDifY = 70;
+
     #ifdef PSP
     OSL_IMAGE *nicCageFace = NULL;
     OSL_IMAGE *nicCageFaceTranslucent = NULL;
     OSL_IMAGE *chicken = NULL;
     screen_width *= 0.5;
     screen_height *= 0.5;
+    hitDifX *= 0.5;
+    hitDifY *= 0.5;
     #else
     vita2d_texture *nicCageFace = NULL;
     vita2d_texture *nicCageFaceTranslucent = NULL;
@@ -46,9 +53,9 @@ int main()
             drawRect(0, 0, screen_width, screen_height, 255, 255, 255);
 
             if (translucent)
-                drawImage(nicCageFaceTranslucent, nic.getRect().x, nic.getRect().y, 1, 1);
+                drawImage(nicCageFaceTranslucent, nic.getRect().x - hitDifX, nic.getRect().y - hitDifY, 1, 1);
             else
-                drawImage(nicCageFace, nic.getRect().x, nic.getRect().y, 1, 1);
+                drawImage(nicCageFace, nic.getRect().x - hitDifX, nic.getRect().y - hitDifY, 1, 1);
 
             drawImage(chicken, chic.getRect().x, chic.getRect().y, 1, 1);
 

@@ -1,8 +1,8 @@
 #include "nicCage.h"
 
 NicCage::NicCage() {
-    int nicX = 100;
-    int nicY = 124;
+    int nicX = 36;
+    int nicY = 22;
 
     #ifdef PSP
     nicX *= 0.5;
