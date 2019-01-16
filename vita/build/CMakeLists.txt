@@ -43,6 +43,7 @@ add_executable(${SHORT_NAME}.elf
 ../../src/nicCage.cpp
 ../../src/chicken.cpp
 ../../src/collide.cpp
+../../src/celery.cpp
 )
 
 target_link_libraries(${SHORT_NAME}.elf

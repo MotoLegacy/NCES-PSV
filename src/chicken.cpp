@@ -1,4 +1,5 @@
 #include "chicken.h"
+#include "celery.h"
 #include <stdlib.h>
 #include <time.h>
 

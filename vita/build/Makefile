@@ -149,6 +149,33 @@ NCESPSV.self_/fast:
 	$(MAKE) -f CMakeFiles/NCESPSV.self_.dir/build.make CMakeFiles/NCESPSV.self_.dir/build
 .PHONY : NCESPSV.self_/fast
 
+NCES-PSV/src/celery.obj: NCES-PSV/src/celery.cpp.obj
+
+.PHONY : NCES-PSV/src/celery.obj
+
+# target to build an object file
+NCES-PSV/src/celery.cpp.obj:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/NCES-PSV/src/celery.cpp.obj
+.PHONY : NCES-PSV/src/celery.cpp.obj
+
+NCES-PSV/src/celery.i: NCES-PSV/src/celery.cpp.i
+
+.PHONY : NCES-PSV/src/celery.i
+
+# target to preprocess a source file
+NCES-PSV/src/celery.cpp.i:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/NCES-PSV/src/celery.cpp.i
+.PHONY : NCES-PSV/src/celery.cpp.i
+
+NCES-PSV/src/celery.s: NCES-PSV/src/celery.cpp.s
+
+.PHONY : NCES-PSV/src/celery.s
+
+# target to generate assembly for a file
+NCES-PSV/src/celery.cpp.s:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/NCES-PSV/src/celery.cpp.s
+.PHONY : NCES-PSV/src/celery.cpp.s
+
 NCES-PSV/src/chicken.obj: NCES-PSV/src/chicken.cpp.obj
 
 .PHONY : NCES-PSV/src/chicken.obj
@@ -349,6 +376,9 @@ help:
 	@echo "... NCESPSV.vpk_"
 	@echo "... NCESPSV.elf"
 	@echo "... NCESPSV.self_"
+	@echo "... NCES-PSV/src/celery.obj"
+	@echo "... NCES-PSV/src/celery.i"
+	@echo "... NCES-PSV/src/celery.s"
 	@echo "... NCES-PSV/src/chicken.obj"
 	@echo "... NCES-PSV/src/chicken.i"
 	@echo "... NCES-PSV/src/chicken.s"

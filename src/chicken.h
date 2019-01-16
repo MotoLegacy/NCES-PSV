@@ -10,6 +10,7 @@ public:
     Chicken();
     rect getRect();
     void spawnChicken();
+    int chickenEaten;
 };
 
 #endif

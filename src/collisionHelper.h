@@ -6,6 +6,8 @@ struct rect {
   double y;
   double w;
   double h;
+  double hv;
+  double vv;
 };
 
 bool checkCollision(rect a, rect b);
