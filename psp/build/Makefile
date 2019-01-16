@@ -16,9 +16,9 @@ LIBS= -losl -lpng -lz \
          -lpspnet_adhocmatching -lpspnet_adhoc -lpspnet_adhocctl -lm -ljpeg
 
 EXTRA_TARGETS = EBOOT.PBP
-PSP_EBOOT_TITLE = NCES
-#PSP_EBOOT_ICON = ICON0.png
-#PSP_EBOOT_PIC1 = PIC1.png
+PSP_EBOOT_TITLE = Nic Cage Eats Stuff
+PSP_EBOOT_ICON = ICON0.png
+PSP_EBOOT_PIC1 = PIC1.png
 
 PSPSDK=$(shell psp-config --pspsdk-path)
 include $(PSPSDK)/lib/build.mak
