@@ -33,7 +33,7 @@
 #define DPAD_LEFT       7
 #define DPAD_RIGHT      8
 
-bool getButton(int button);
+bool getButton(int button, int hold);
 int getJoyStickX();
 int getJoyStickY();
 #endif

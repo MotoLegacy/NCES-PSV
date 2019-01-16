@@ -1,11 +1,14 @@
 /* 
     Graphics.cpp - handles image defining and drawing
 */
-#include "graphics.h"
-//-------------------PSP SECTION--------------------//
-#ifdef PSP 
 
-    OSL_IMAGE *defineImage(char *filename) {
+#include "graphics.h"
+
+
+#ifdef PSP 
+//-------------------PSP SECTION--------------------//
+
+OSL_IMAGE *defineImage(char *filename) {
     OSL_IMAGE *temp;
     temp = oslLoadImageFilePNG(filename, OSL_IN_RAM | OSL_SWIZZLED, OSL_PF_8888);
 
@@ -15,8 +18,12 @@
 void drawImage(OSL_IMAGE *img, int x, int y, int scalex, int scaley) {
     oslDrawImageXY(img, x, y);
 }
-//-----------------VITA SECTION---------------------//
+
+void freeImage(OSL_IMAGE *img) {
+    oslDeleteImage(img);
+}
 #else 
+//-----------------VITA SECTION---------------------//
 
 vita2d_texture *defineImage(const char *filename) {
     std::string a = "app0:/";
@@ -31,6 +38,10 @@ vita2d_texture *defineImage(const char *filename) {
 
 void drawImage(const vita2d_texture *texture, float x, float y, float scalex, float scaley) {
     vita2d_draw_texture_scale(texture, x, y, scalex, scaley);
+}
+
+void freeImage(vita2d_texture *img) {
+    vita2d_free_texture(img);
 }
 
 #endif

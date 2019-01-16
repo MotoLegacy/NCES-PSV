@@ -78,5 +78,8 @@ vita_create_vpk(${SHORT_NAME}.vpk ${VITA_TITLEID} ${SHORT_NAME}.self
   VERSION ${VITA_VERSION}
   NAME ${VITA_APP_NAME}
 
-  FILE ../gfx/test.png gfx/test.png
+  FILE ../gfx/celery.png gfx/celery.png
+  FILE ../gfx/chicken.png gfx/chicken.png
+  FILE ../gfx/NicCageFace.png gfx/NicCageFace.png
+  FILE ../gfx/NicCageFaceTranslucent.png gfx/NicCageFaceTranslucent.png
 )

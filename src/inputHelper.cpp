@@ -7,41 +7,81 @@
 //FIXME - find a better way for input. This will do for now, though.
 //v2.0 this should be priority :)
 
-bool getButton(int button) {
+bool getButton(int button, int hold) {
     #ifdef PSP
     oslReadKeys();
     switch(button) {
         case FACE_CROSS:
-            if (osl_keys->pressed.cross)
-                return true;
+            if (hold) {
+                if (osl_keys->held.cross)
+                    return true;
+            } else {
+                if (osl_keys->pressed.cross)
+                    return true;
+            }
             break;
         case FACE_CIRCLE:
-            if (osl_keys->pressed.circle)
-                return true;
+            if (hold) {
+                if (osl_keys->held.circle)
+                    return true;
+            } else {
+                if (osl_keys->pressed.circle)
+                    return true;
+            }
             break;
         case FACE_SQUARE:
-            if (osl_keys->pressed.square)
-                return true;
+            if (hold) {
+                if (osl_keys->held.square)
+                    return true;
+            } else {
+                if (osl_keys->pressed.square)
+                    return true;
+            }
             break;
         case FACE_TRIANGLE:
-            if (osl_keys->pressed.triangle)
-                return true;
+            if (hold) {
+                if (osl_keys->held.triangle)
+                    return true;
+            } else {
+                if (osl_keys->pressed.triangle)
+                    return true;
+            }
             break;
         case DPAD_UP:
-            if (osl_keys->held.up)
-                return true;
+            if (hold) {
+                if (osl_keys->held.up)
+                    return true;
+            } else {
+                if (osl_keys->pressed.up)
+                    return true;
+            }
             break;
         case DPAD_DOWN:
-            if (osl_keys->held.down)
-                return true;
+            if (hold) {
+                if (osl_keys->held.down)
+                    return true;
+            } else {
+                if (osl_keys->pressed.down)
+                    return true;
+            }
             break;
         case DPAD_LEFT:
-            if (osl_keys->held.left)
-                return true;
+            if (hold) {
+                if (osl_keys->held.left)
+                    return true;
+            } else {
+                if (osl_keys->pressed.left)
+                    return true;
+            }
             break;
         case DPAD_RIGHT:
-            if (osl_keys->held.right)
-                return true;
+            if (hold) {
+                if (osl_keys->held.right)
+                    return true;
+            } else {
+                if (osl_keys->pressed.right)
+                    return true;
+            }
             break;
         default: return false;
     }
