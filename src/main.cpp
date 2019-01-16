@@ -2,6 +2,7 @@
 #include "inputHelper.h"
 #include "nicCage.h"
 #include "chicken.h"
+#include "collide.h"
 
 #ifdef PSP
     PSP_MODULE_INFO("NCESPSP", 0, 1, 0);
@@ -56,6 +57,11 @@ int main()
             oslDrawStringf(0, 250, "Joystick x %i", getJoyStickX());
             oslDrawStringf(0, 260, "Joystick y %i", getJoyStickY());
             #endif
+
+            if (checkCollison(nic.getRect(), chic.getRect())) {
+                chic.spawnChicken();
+            }
+
             endDrawing();
         }
         skip = syncFrame();

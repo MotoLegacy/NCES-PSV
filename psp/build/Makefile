@@ -1,5 +1,5 @@
 TARGET = NCESPSP
-OBJS = ../../src/main.o ../../src/graphics.o ../../src/inputHelper.o ../../src/collisionHelper.o ../../src/nicCage.o ../../src/chicken.o
+OBJS = ../../src/main.o ../../src/graphics.o ../../src/inputHelper.o ../../src/collisionHelper.o ../../src/nicCage.o ../../src/chicken.o ../../src/collide.o
 
 INCDIR = $(PSPPATH)/include
 CFLAGS = -O3 -G0 -Wall -mpreferred-stack-boundary=4 #-enable-newlib-hw-fp -ffast-math

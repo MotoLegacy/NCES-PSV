@@ -176,6 +176,33 @@ NCES-PSV/src/chicken.cpp.s:
 	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/NCES-PSV/src/chicken.cpp.s
 .PHONY : NCES-PSV/src/chicken.cpp.s
 
+NCES-PSV/src/collide.obj: NCES-PSV/src/collide.cpp.obj
+
+.PHONY : NCES-PSV/src/collide.obj
+
+# target to build an object file
+NCES-PSV/src/collide.cpp.obj:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/NCES-PSV/src/collide.cpp.obj
+.PHONY : NCES-PSV/src/collide.cpp.obj
+
+NCES-PSV/src/collide.i: NCES-PSV/src/collide.cpp.i
+
+.PHONY : NCES-PSV/src/collide.i
+
+# target to preprocess a source file
+NCES-PSV/src/collide.cpp.i:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/NCES-PSV/src/collide.cpp.i
+.PHONY : NCES-PSV/src/collide.cpp.i
+
+NCES-PSV/src/collide.s: NCES-PSV/src/collide.cpp.s
+
+.PHONY : NCES-PSV/src/collide.s
+
+# target to generate assembly for a file
+NCES-PSV/src/collide.cpp.s:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/NCES-PSV/src/collide.cpp.s
+.PHONY : NCES-PSV/src/collide.cpp.s
+
 NCES-PSV/src/collisionHelper.obj: NCES-PSV/src/collisionHelper.cpp.obj
 
 .PHONY : NCES-PSV/src/collisionHelper.obj
@@ -325,6 +352,9 @@ help:
 	@echo "... NCES-PSV/src/chicken.obj"
 	@echo "... NCES-PSV/src/chicken.i"
 	@echo "... NCES-PSV/src/chicken.s"
+	@echo "... NCES-PSV/src/collide.obj"
+	@echo "... NCES-PSV/src/collide.i"
+	@echo "... NCES-PSV/src/collide.s"
 	@echo "... NCES-PSV/src/collisionHelper.obj"
 	@echo "... NCES-PSV/src/collisionHelper.i"
 	@echo "... NCES-PSV/src/collisionHelper.s"
