@@ -38,6 +38,7 @@ include_directories(
 add_executable(${SHORT_NAME}.elf
 ../../src/main.cpp
 ../../src/game.cpp
+../../src/gameOver.cpp
 ../../src/graphics.cpp
 ../../src/inputHelper.cpp
 ../../src/collisionHelper.cpp

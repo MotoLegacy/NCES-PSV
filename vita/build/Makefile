@@ -311,6 +311,33 @@ NCES-PSV/src/game.cpp.s:
 	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/NCES-PSV/src/game.cpp.s
 .PHONY : NCES-PSV/src/game.cpp.s
 
+NCES-PSV/src/gameOver.obj: NCES-PSV/src/gameOver.cpp.obj
+
+.PHONY : NCES-PSV/src/gameOver.obj
+
+# target to build an object file
+NCES-PSV/src/gameOver.cpp.obj:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/NCES-PSV/src/gameOver.cpp.obj
+.PHONY : NCES-PSV/src/gameOver.cpp.obj
+
+NCES-PSV/src/gameOver.i: NCES-PSV/src/gameOver.cpp.i
+
+.PHONY : NCES-PSV/src/gameOver.i
+
+# target to preprocess a source file
+NCES-PSV/src/gameOver.cpp.i:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/NCES-PSV/src/gameOver.cpp.i
+.PHONY : NCES-PSV/src/gameOver.cpp.i
+
+NCES-PSV/src/gameOver.s: NCES-PSV/src/gameOver.cpp.s
+
+.PHONY : NCES-PSV/src/gameOver.s
+
+# target to generate assembly for a file
+NCES-PSV/src/gameOver.cpp.s:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/NCES-PSV/src/gameOver.cpp.s
+.PHONY : NCES-PSV/src/gameOver.cpp.s
+
 NCES-PSV/src/graphics.obj: NCES-PSV/src/graphics.cpp.obj
 
 .PHONY : NCES-PSV/src/graphics.obj
@@ -448,6 +475,9 @@ help:
 	@echo "... NCES-PSV/src/game.obj"
 	@echo "... NCES-PSV/src/game.i"
 	@echo "... NCES-PSV/src/game.s"
+	@echo "... NCES-PSV/src/gameOver.obj"
+	@echo "... NCES-PSV/src/gameOver.i"
+	@echo "... NCES-PSV/src/gameOver.s"
 	@echo "... NCES-PSV/src/graphics.obj"
 	@echo "... NCES-PSV/src/graphics.i"
 	@echo "... NCES-PSV/src/graphics.s"

@@ -33,7 +33,17 @@ vita2d_texture *nicCageFace = NULL;
 vita2d_texture *nicCageFaceTranslucent = NULL;
 vita2d_texture *chicken = NULL;
 vita2d_texture *celery = NULL;
+vita2d_pgf *pgf;
 #endif
+
+void restartGame() {
+    chic.chickenEaten = 0;
+    celeryEaten = 0;
+    chic.spawnChicken();
+    cel.spawnCelery();
+    //nic.getRect().x = 0;
+    //nic.getRect().y = 0;
+}
 
 void cleanupGame() {
     freeImage(nicCageFace);
@@ -44,7 +54,7 @@ void cleanupGame() {
 
 void gameInput() {
     if (getButton(FACE_CIRCLE, 0)) {
-        gameState = 1;
+        gameState = 2;
         cleanupGame();
     }
 
@@ -75,10 +85,14 @@ void initGame() {
     chic.spawnChicken();
     cel.spawnCelery();
 
-    //adjust some sizes for psp
+    //adjust some sizes for psp (and font)
     #ifdef PSP
     hitDifX *= 0.5;
     hitDifY *= 0.5;
+    oslSetBkColor(RGBA(0, 0, 0, 0));
+    oslSetTextColor(RGBA(0, 0, 0, 255));
+    #else //vita font
+    pgf = vita2d_load_default_pgf();
     #endif
 }
 
@@ -100,9 +114,11 @@ void runGame() {
     cel.moveCelery();
 
     #ifdef PSP
-    oslDrawString(0, 240, "DEBUG");
-    oslDrawStringf(0, 250, "Joystick x %i", getJoyStickX());
-    oslDrawStringf(0, 260, "Joystick y %i", getJoyStickY());
+    oslDrawStringf(25, 15, "Don't eat Celery: %i/3", celeryEaten);
+    oslDrawStringf(25, 25, "Chicken Legs Eaten: %i", chic.chickenEaten);
+    #else
+    vita2d_pgf_draw_textf(pgf, 50, 30, RGBA8(255, 0, 0, 255), 1.0f, "Don't eat Celery: %d/3", celeryEaten);
+    vita2d_pgf_draw_textf(pgf, 50, 50, RGBA8(0, 0, 0, 255), 1.0f, "Chicken Legs Eaten: %d", chic.chickenEaten);
     #endif
 
     if (checkCollison(nic.getRect(), chic.getRect())) {
@@ -117,6 +133,10 @@ void runGame() {
     if (checkCollision(nic.getRect(), cel.getRect()) && !translucent) {
         cel.spawnCelery();
         celeryEaten++;
+
+        if (celeryEaten == 3) {
+            gameState = 1;
+        }
     }
 
     gameInput(); //keep as a separate function (cleaner)

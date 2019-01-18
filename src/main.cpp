@@ -1,11 +1,12 @@
 #include "graphics.h"
 #include "game.h"
+#include "gameOver.h"
 #include "inputHelper.h"
 
 /*
     TODO:
         1. make celery an array (to have multiple)
-        2. vita2d draw text
+        2. look into multiple text colors for oslib..
 */
 
 #ifdef PSP
@@ -28,6 +29,9 @@ int main()
                     runGame();
                     break;
                 case 1:
+                    runGameOver();
+                    break;
+                case 2:
                     quit = true;
                     break;
 
