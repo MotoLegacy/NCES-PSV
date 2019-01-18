@@ -257,6 +257,60 @@ NCES-PSV/src/collisionHelper.cpp.s:
 	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/NCES-PSV/src/collisionHelper.cpp.s
 .PHONY : NCES-PSV/src/collisionHelper.cpp.s
 
+NCES-PSV/src/functions.obj: NCES-PSV/src/functions.cpp.obj
+
+.PHONY : NCES-PSV/src/functions.obj
+
+# target to build an object file
+NCES-PSV/src/functions.cpp.obj:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/NCES-PSV/src/functions.cpp.obj
+.PHONY : NCES-PSV/src/functions.cpp.obj
+
+NCES-PSV/src/functions.i: NCES-PSV/src/functions.cpp.i
+
+.PHONY : NCES-PSV/src/functions.i
+
+# target to preprocess a source file
+NCES-PSV/src/functions.cpp.i:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/NCES-PSV/src/functions.cpp.i
+.PHONY : NCES-PSV/src/functions.cpp.i
+
+NCES-PSV/src/functions.s: NCES-PSV/src/functions.cpp.s
+
+.PHONY : NCES-PSV/src/functions.s
+
+# target to generate assembly for a file
+NCES-PSV/src/functions.cpp.s:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/NCES-PSV/src/functions.cpp.s
+.PHONY : NCES-PSV/src/functions.cpp.s
+
+NCES-PSV/src/game.obj: NCES-PSV/src/game.cpp.obj
+
+.PHONY : NCES-PSV/src/game.obj
+
+# target to build an object file
+NCES-PSV/src/game.cpp.obj:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/NCES-PSV/src/game.cpp.obj
+.PHONY : NCES-PSV/src/game.cpp.obj
+
+NCES-PSV/src/game.i: NCES-PSV/src/game.cpp.i
+
+.PHONY : NCES-PSV/src/game.i
+
+# target to preprocess a source file
+NCES-PSV/src/game.cpp.i:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/NCES-PSV/src/game.cpp.i
+.PHONY : NCES-PSV/src/game.cpp.i
+
+NCES-PSV/src/game.s: NCES-PSV/src/game.cpp.s
+
+.PHONY : NCES-PSV/src/game.s
+
+# target to generate assembly for a file
+NCES-PSV/src/game.cpp.s:
+	$(MAKE) -f CMakeFiles/NCESPSV.elf.dir/build.make CMakeFiles/NCESPSV.elf.dir/NCES-PSV/src/game.cpp.s
+.PHONY : NCES-PSV/src/game.cpp.s
+
 NCES-PSV/src/graphics.obj: NCES-PSV/src/graphics.cpp.obj
 
 .PHONY : NCES-PSV/src/graphics.obj
@@ -388,6 +442,12 @@ help:
 	@echo "... NCES-PSV/src/collisionHelper.obj"
 	@echo "... NCES-PSV/src/collisionHelper.i"
 	@echo "... NCES-PSV/src/collisionHelper.s"
+	@echo "... NCES-PSV/src/functions.obj"
+	@echo "... NCES-PSV/src/functions.i"
+	@echo "... NCES-PSV/src/functions.s"
+	@echo "... NCES-PSV/src/game.obj"
+	@echo "... NCES-PSV/src/game.i"
+	@echo "... NCES-PSV/src/game.s"
 	@echo "... NCES-PSV/src/graphics.obj"
 	@echo "... NCES-PSV/src/graphics.i"
 	@echo "... NCES-PSV/src/graphics.s"

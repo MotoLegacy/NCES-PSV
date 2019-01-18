@@ -6,6 +6,8 @@
 class Celery {
 private: 
     rect celRect;
+    int celeryWidth;
+    int celeryHeight;
 public: 
     Celery();
     rect getRect();
