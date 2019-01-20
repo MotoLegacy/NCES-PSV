@@ -114,7 +114,9 @@ void runGame() {
     cel.moveCelery();
 
     #ifdef PSP
+    oslSetTextColor(RGBA(255, 0, 0, 255));
     oslDrawStringf(25, 15, "Don't eat Celery: %i/3", celeryEaten);
+    oslSetTextColor(RGBA(0, 0, 0, 255));
     oslDrawStringf(25, 25, "Chicken Legs Eaten: %i", chic.chickenEaten);
     #else
     vita2d_pgf_draw_textf(pgf, 50, 30, RGBA8(255, 0, 0, 255), 1.0f, "Don't eat Celery: %d/3", celeryEaten);
