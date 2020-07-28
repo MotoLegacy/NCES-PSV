@@ -50,8 +50,6 @@ add_executable(${SHORT_NAME}.elf
 )
 
 target_link_libraries(${SHORT_NAME}.elf
-
-
   debugnet
   vita2d
   soloud
@@ -75,6 +73,7 @@ target_link_libraries(${SHORT_NAME}.elf
   z
   m
   SceAudio_stub
+  SceAppMgr_stub
 )
 
 
