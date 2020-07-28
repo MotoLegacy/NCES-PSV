@@ -44,9 +44,6 @@ void restartGame() {
     chic.chickenEaten = 0;
     celeryEaten = 0;
     chic.spawnChicken();
-    //cel.spawnCelery();
-    //nic.getRect().x = 0;
-    //nic.getRect().y = 0;
 }
 
 void cleanupGame() {
@@ -147,14 +144,23 @@ void runGame() {
         }
     }
 
-    /*if (checkCollision(nic.getRect(), cel.getRect()) && !translucent) {
-        cel.spawnCelery();
-        celeryEaten++;
+    for (int i = 0; i < celCount; ++i) {
+        if (checkCollision(nic.getRect(), cel[i].getRect()) && !translucent) {
+            cel.clear();
 
-        if (celeryEaten == 3) {
-            gameState = 1;
+            for (int i = 0; i < celCount+1; ++i) {
+                Celery newcel;
+                newcel.spawnCelery();
+                cel.push_back(newcel);
+            }
+
+            celeryEaten++;
+
+            if (celeryEaten == 3) {
+                gameState = 1;
+            }
         }
-    }*/
+    }
 
     gameInput(); //keep as a separate function (cleaner)
 }
