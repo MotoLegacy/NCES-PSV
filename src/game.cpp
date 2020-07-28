@@ -8,6 +8,7 @@
 
 #include <vector>
 #include <iostream>
+#include <cmath>
 
 int gameState;
 bool gameInit;
@@ -44,6 +45,12 @@ void restartGame() {
     chic.chickenEaten = 0;
     celeryEaten = 0;
     chic.spawnChicken();
+
+    cel.clear();
+    celCount = 1;
+    Celery newcel;
+    newcel.spawnCelery();
+    cel.push_back(newcel);
 }
 
 void cleanupGame() {
@@ -101,6 +108,12 @@ void initGame() {
     #endif
 }
 
+// Returns the distance between objects
+int distance(int x1, int y1, int x2, int y2) {
+    return sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2));
+}
+
+
 void runGame() {
     if (!gameInit) {
         initGame();
@@ -118,8 +131,18 @@ void runGame() {
 
     for (int i = 0; i < celCount; ++i) {
         drawImage(celery, cel[i].getRect().x, cel[i].getRect().y, 1, 1);
-        cel[i].moveCelery();
+        // protect mode
+        if (celCount % 4 == 0) {
+            if (distance(chic.getRect().x, chic.getRect().y, cel[i].getRect().x, cel[i].getRect().y) > 50) {
+                
+            }
+        }
+        // normal mode
+        else {
+            cel[i].moveCelery();
+        }
     }
+
 
     #ifdef PSP
     oslSetTextColor(RGBA(255, 0, 0, 255));
