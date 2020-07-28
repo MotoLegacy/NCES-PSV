@@ -13,7 +13,7 @@ PSP_LARGE_MEMORY = 1
 LDFLAGS =
 LIBS= -losl -lpng -lz \
          -lpsphprm -lpspsdk -lpspctrl -lpspumd -lpsprtc -lpsppower -lpspgu -lpspgum  -lpspaudiolib -lpspaudio -lpsphttp -lpspssl -lpspwlan \
-         -lpspnet_adhocmatching -lpspnet_adhoc -lpspnet_adhocctl -lm -ljpeg
+         -lpspnet_adhocmatching -lpspnet_adhoc -lpspnet_adhocctl -lm -ljpeg -lstdc++
 
 EXTRA_TARGETS = EBOOT.PBP
 PSP_EBOOT_TITLE = Nic Cage Eats Stuff

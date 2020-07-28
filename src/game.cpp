@@ -6,13 +6,17 @@
 #include "collide.h"
 #include "functions.h"
 
+#include <vector>
+#include <iostream>
+
 int gameState;
 bool gameInit;
 
 //entities
 NicCage nic;
 Chicken chic;
-Celery cel;
+std::vector<Celery> cel;
+int celCount;
 
 //gameplay
 int celeryEaten;
@@ -40,7 +44,7 @@ void restartGame() {
     chic.chickenEaten = 0;
     celeryEaten = 0;
     chic.spawnChicken();
-    cel.spawnCelery();
+    //cel.spawnCelery();
     //nic.getRect().x = 0;
     //nic.getRect().y = 0;
 }
@@ -75,6 +79,7 @@ void gameInput() {
 }
 
 void initGame() {
+    Celery newcel;
     //images
     nicCageFace = defineImage("gfx/NicCageFace.png");
     nicCageFaceTranslucent = defineImage("gfx/NicCageFaceTranslucent.png");
@@ -83,7 +88,11 @@ void initGame() {
 
     //throw some stuff in the world
     chic.spawnChicken();
-    cel.spawnCelery();
+    newcel.spawnCelery();
+
+    // push new celery to vector
+    cel.push_back(newcel);
+    celCount++;
 
     //adjust some sizes for psp (and font)
     #ifdef PSP
@@ -110,8 +119,11 @@ void runGame() {
         drawImage(nicCageFace, nic.getRect().x - hitDifX, nic.getRect().y - hitDifY, 1, 1);
 
     drawImage(chicken, chic.getRect().x, chic.getRect().y, 1, 1);
-    drawImage(celery, cel.getRect().x, cel.getRect().y, 1, 1);
-    cel.moveCelery();
+
+    for (int i = 0; i < celCount; ++i) {
+        drawImage(celery, cel[i].getRect().x, cel[i].getRect().y, 1, 1);
+        cel[i].moveCelery();
+    }
 
     #ifdef PSP
     oslSetTextColor(RGBA(255, 0, 0, 255));
@@ -127,19 +139,22 @@ void runGame() {
         chic.spawnChicken();
         chic.chickenEaten++;
 
-        if (chic.chickenEaten == 3) {
-            cel.spawnCelery();
+        if (chic.chickenEaten % 3 == 0) {
+            Celery newcel;
+            newcel.spawnCelery();
+            cel.push_back(newcel);
+            celCount++;
         }
     }
 
-    if (checkCollision(nic.getRect(), cel.getRect()) && !translucent) {
+    /*if (checkCollision(nic.getRect(), cel.getRect()) && !translucent) {
         cel.spawnCelery();
         celeryEaten++;
 
         if (celeryEaten == 3) {
             gameState = 1;
         }
-    }
+    }*/
 
     gameInput(); //keep as a separate function (cleaner)
 }
