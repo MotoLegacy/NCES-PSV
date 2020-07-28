@@ -39,6 +39,7 @@ int main()
     oslEndGfx();
     oslQuit();
     #else
+    cleanupGame();
     vita2d_fini();
     sceKernelExitProcess(0);
     #endif  

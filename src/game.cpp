@@ -56,7 +56,6 @@ void cleanupGame() {
 void gameInput() {
     if (getButton(FACE_CIRCLE, 0)) {
         gameState = 2;
-        cleanupGame();
     }
 
     if (getButton(FACE_CROSS, 1)) {
