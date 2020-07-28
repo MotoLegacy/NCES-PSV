@@ -3,12 +3,6 @@
 #include "gameOver.h"
 #include "inputHelper.h"
 
-/*
-    TODO:
-        1. make celery an array (to have multiple)
-        2. look into multiple text colors for oslib..
-*/
-
 #ifdef PSP
     PSP_MODULE_INFO("NCESPSP", 0, 1, 0);
     PSP_MAIN_THREAD_ATTR(THREAD_ATTR_USER | THREAD_ATTR_VFPU);

@@ -1,5 +1,0 @@
-/home/dad/Documents/NCES-PSV/vita/build/CMakeFiles/rebuild_cache.dir
-/home/dad/Documents/NCES-PSV/vita/build/CMakeFiles/edit_cache.dir
-/home/dad/Documents/NCES-PSV/vita/build/CMakeFiles/NCESPSV.vpk.dir
-/home/dad/Documents/NCES-PSV/vita/build/CMakeFiles/NCESPSV.elf.dir
-/home/dad/Documents/NCES-PSV/vita/build/CMakeFiles/NCESPSV.self.dir
